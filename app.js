@@ -23,5 +23,10 @@ function initPlateau() {
 
     // Ajout du tableau à la div de contenu
     contenuDiv.appendChild(tableau);
+    initAlien();
+    // parcoursGrille();
 }
+
+
+    
 
