@@ -50,11 +50,6 @@ function parcoursGrille() {
     }
 
     
-    if(isDown  === true){
-        // Appeler récursivement la fonction pour créer un déplacement continu de l'alien
-        setTimeout(parcoursGrille, 1000); // Appel toutes les secondes
-        return;
-    }
     var newX;
     if(isSens === false ){
         newX = posAlienX + 1;
