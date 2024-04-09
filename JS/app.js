@@ -14,7 +14,7 @@ function initPlateau() {
         for (var j = 0; j < largeur; j++) { // boucle for dépendant de la variable largeur
             var cellule = document.createElement('td'); //Créer la cellule
             var image = document.createElement('img'); //créer la balise image
-            image.src = 'vide.png'; // Source de l'image
+            image.src = '/ASSET/vide.png'; // Source de l'image
             cellule.appendChild(image); // ajoute la balise image dans la cellule
             ligne.appendChild(cellule);// ajoute la cellule dans la ligne
         }

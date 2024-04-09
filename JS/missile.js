@@ -10,7 +10,7 @@ function pewPew() {
 
     // Mettre à jour le plateau pour afficher le missile à l'emplacement correspondant
     var celluleMissile = document.querySelector('tr:nth-child(' + (posMissileY + 1) + ') td:nth-child(' + (posMissileX + 1) + ')');
-    celluleMissile.innerHTML = '<img src="missile.png">'; //remplace l'image vide par le missile
+    celluleMissile.innerHTML = '<img src="/ASSET/missile.png">'; //remplace l'image vide par le missile
 
     // Déplacer le missile automatiquement vers le haut
     deplacementMissile(posMissileY, posMissileX);
@@ -20,7 +20,7 @@ function pewPew() {
 function deplacementMissile(y, x) {
     // Effacer l'image de missile des coordonnées actuelles
     var celluleMissile = document.querySelector('tr:nth-child(' + (y + 1) + ') td:nth-child(' + (x + 1) + ')');
-    celluleMissile.innerHTML = '<img src="vide.png">';
+    celluleMissile.innerHTML = '<img src="/ASSET/vide.png">';
 
     // Si le missile est à la limite supérieure du plateau, ne pas le déplacer davantage
     if (y === 0) return;
@@ -28,7 +28,7 @@ function deplacementMissile(y, x) {
     // Écrire une image de missile aux coordonnées y-1
     var nouvellePositionY = y - 1;
     var nouvelleCelluleMissile = document.querySelector('tr:nth-child(' + (nouvellePositionY + 1) + ') td:nth-child(' + (x + 1) + ')');
-    nouvelleCelluleMissile.innerHTML = '<img src="missile.png">';
+    nouvelleCelluleMissile.innerHTML = '<img src="/ASSET/missile.png">';
 
     // Appeler la fonction deplacementMissile de façon récursive avec un délai de 200ms
     setTimeout(function() {

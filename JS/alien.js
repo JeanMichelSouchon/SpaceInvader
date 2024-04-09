@@ -12,7 +12,7 @@ function initAlien() {
     isDown = false;
 
     var celluleAlien = document.querySelector('tr:nth-child(' + (posAlienY) + ') td:nth-child(' + (posAlienX) + ')');
-    celluleAlien.innerHTML = '<img src="alien.png">';
+    celluleAlien.innerHTML = '<img src="/ASSET/alien.png">';
 
     // Appeler la fonction deplaceAlien de façon récursive pour déplacer l'alien
     setTimeout(function() {
@@ -24,11 +24,11 @@ function initAlien() {
 function deplaceAlien(x, y) {
     // Effacer l'alien de sa position actuelle
     var celluleAlien = document.querySelector('tr:nth-child(' + (posAlienY) + ') td:nth-child(' + (posAlienX) + ')');
-    celluleAlien.innerHTML = '<img src="vide.png">';
+    celluleAlien.innerHTML = '<img src="/ASSET/vide.png">';
 
     // Afficher l'alien à la nouvelle position
     var nouvelleCelluleAlien = document.querySelector('tr:nth-child(' + (y) + ') td:nth-child(' + (x) + ')');
-    nouvelleCelluleAlien.innerHTML = '<img src="alien.png">';
+    nouvelleCelluleAlien.innerHTML = '<img src="/ASSET/alien.png">';
 
     // Mettre à jour les variables de position de l'alien
     posAlienX = x;
