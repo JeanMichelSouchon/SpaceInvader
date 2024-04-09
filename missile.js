@@ -10,26 +10,25 @@ function pewPew() {
 
     // Mettre à jour le plateau pour afficher le missile à l'emplacement correspondant
     var celluleMissile = document.querySelector('tr:nth-child(' + (posMissileY) + ') td:nth-child(' + (posMissileX + 1) + ')');
-    celluleMissile.innerHTML = '<img src="missile.gif">'; //remplace l'image vide par le missile
+    celluleMissile.innerHTML = '<img src="missile.gif">'; 
+    
 
     // Déplacer le missile automatiquement vers le haut
     deplacementMissile(posMissileY, posMissileX);
 }
 
 
-
 // Fonction pour déplacer le missile vers le haut
 function deplacementMissile(y, x) {
     if (posAlienX === x && posAlienY === y) {
-        var celluleAlienActuelle = document.querySelector('tr:nth-child(' + posAlienY + ') td:nth-child(' + posAlienX + ')');
-        celluleAlienActuelle.innerHTML = '<img src="vide.png">';
+        effacerAlien();
         // Effacer l'image de missile des coordonnées actuelles
-        var celluleMissile = document.querySelector('tr:nth-child(' + (y + 1) + ') td:nth-child(' + (x + 1) + ')');
+        var celluleMissile = document.querySelector('tr:nth-child(' + (y + 1) + ') td:nth-child(' + (x +1) + ')');
         celluleMissile.innerHTML = '<img src="vide.png">';
         console.log('Collision avec l\'alien!');
         updateScore();
         // Réinitialiser l'alien en haut à gauche de l'écran
-        initAlien();
+        resetAlien();
 
         
     } else {

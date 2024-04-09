@@ -3,10 +3,12 @@ var largeur = 9;
 var hauteur = 5;
 var plateau = [];
 var score = 0;
-var isEndOfGame=true;
+var isPlateauInit = false;
+var isEndOfGame = false;
 
 // Fonction pour initialiser le plateau
 function initPlateau() {
+    if (!isPlateauInit) {
         var contenuDiv = document.getElementById('contenu'); // localise la balise div par l'élément contenu
         var tableau = document.createElement('table'); // créer la création de balise tableau (html)
 
@@ -26,7 +28,8 @@ function initPlateau() {
     // Ajout du tableau à la div de contenu
     contenuDiv.appendChild(tableau);
     initAlien();
-    // parcoursGrille();
+    isPlateauInit = true;
+    }
 }
 
 function updateScore() {
@@ -35,8 +38,9 @@ function updateScore() {
 }
 
 function resetGame(){
-    initPlateau();
-    initAlien();
     score = 0;
-    updateScore();
+    document.getElementById('score').innerText = 'Score: ' + score; // Met à jour l'affichage du score dans l'élément HTML
+    isEndOfGame = false;
+    console.log(isEndOfGame);
+    resetAlien();
 };
