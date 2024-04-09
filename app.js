@@ -2,6 +2,7 @@
 var largeur = 9;
 var hauteur = 5;
 var plateau = [];
+var score = 0;
 
 // Fonction pour initialiser le plateau
 function initPlateau() {
@@ -26,7 +27,10 @@ function initPlateau() {
     initAlien();
     // parcoursGrille();
 }
-
+function updateScore() {
+    score++; // Incrémente le score à chaque fois qu'un alien est détruit
+    document.getElementById('score').innerText = 'Score: ' + score; // Met à jour l'affichage du score dans l'élément HTML
+}
 
     
 

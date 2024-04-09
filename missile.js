@@ -21,9 +21,17 @@ function pewPew() {
 // Fonction pour déplacer le missile vers le haut
 function deplacementMissile(y, x) {
     if (posAlienX === x && posAlienY === y) {
+        var celluleAlienActuelle = document.querySelector('tr:nth-child(' + posAlienY + ') td:nth-child(' + posAlienX + ')');
+        celluleAlienActuelle.innerHTML = '<img src="vide.png">';
+        // Effacer l'image de missile des coordonnées actuelles
+        var celluleMissile = document.querySelector('tr:nth-child(' + (y + 1) + ') td:nth-child(' + (x + 1) + ')');
+        celluleMissile.innerHTML = '<img src="vide.png">';
         console.log('Collision avec l\'alien!');
+        updateScore();
         // Réinitialiser l'alien en haut à gauche de l'écran
         initAlien();
+
+        
     } else {
         // Effacer l'image de missile des coordonnées actuelles
         var celluleMissile = document.querySelector('tr:nth-child(' + (y + 1) + ') td:nth-child(' + (x + 1) + ')');

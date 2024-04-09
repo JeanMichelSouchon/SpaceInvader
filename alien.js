@@ -12,7 +12,7 @@ function initAlien() {
     isDown = false;
 
     var celluleAlien = document.querySelector('tr:nth-child(' + (posAlienY) + ') td:nth-child(' + (posAlienX) + ')'); // Position en haut a gauche du table
-    celluleAlien.innerHTML = '<img src="alien.png">';
+    celluleAlien.innerHTML = '<img src="alien.gif">';
 
     // Appeler la fonction deplaceAlien de façon récursive pour déplacer l'alien
     setTimeout(function() {
@@ -46,7 +46,7 @@ function parcoursGrille() {
 
     // Afficher l'alien à sa nouvelle position
     var celluleAlienNouvelle = document.querySelector('tr:nth-child(' + posAlienY + ') td:nth-child(' + posAlienX + ')');
-    celluleAlienNouvelle.innerHTML = '<img src="alien.png">';
+    celluleAlienNouvelle.innerHTML = '<img src="alien.gif">';
     
     
     // Appeler récursivement la fonction pour créer un déplacement continu de l'alien
