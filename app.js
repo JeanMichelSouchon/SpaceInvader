@@ -4,7 +4,7 @@ var hauteur = 5;
 var plateau = [];
 var score = 0;
 var isPlateauInit = false;
-var isEndOfGame = false;
+
 
 // Fonction pour initialiser le plateau
 function initPlateau() {
@@ -40,7 +40,6 @@ function updateScore() {
 function resetGame(){
     score = 0;
     document.getElementById('score').innerText = 'Score: ' + score; // Met à jour l'affichage du score dans l'élément HTML
-    isEndOfGame = false;
-    console.log(isEndOfGame);
     resetAlien();
+
 };
