@@ -56,5 +56,4 @@ function parcoursGrille() {
 
 // Exporter les fonctions parcoursGrille,initAlien et deplaceAlien pour qu'elles soient accessibles depuis l'extérieur du fichier
 window.initAlien = initAlien;
-window.deplaceAlien = deplaceAlien;
 window.parcoursGrille = parcoursGrille;
