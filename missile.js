@@ -9,7 +9,7 @@ function pewPew() {
     posMissileY = posShipY - 1; // place le missile la ligne au dessus du vaisseau
 
     // Mettre à jour le plateau pour afficher le missile à l'emplacement correspondant
-    var celluleMissile = document.querySelector('tr:nth-child(' + (posMissileY + 1) + ') td:nth-child(' + (posMissileX + 1) + ')');
+    var celluleMissile = document.querySelector('tr:nth-child(' + (posMissileY) + ') td:nth-child(' + (posMissileX + 1) + ')');
     celluleMissile.innerHTML = '<img src="missile.gif">'; //remplace l'image vide par le missile
 
     // Déplacer le missile automatiquement vers le haut

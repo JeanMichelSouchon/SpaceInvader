@@ -3,6 +3,7 @@ var posAlienX;
 var posAlienY;
 var isSens;
 var isDown;
+var isEndOfGame;
 
 // Fonction pour initialiser l'alien en haut à gauche de l'écran
 function initAlien() {
