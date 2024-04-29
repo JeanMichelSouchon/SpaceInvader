@@ -10,7 +10,7 @@ function pewPew() {
 
     // Mettre à jour le plateau pour afficher le missile à l'emplacement correspondant
     var celluleMissile = document.querySelector('tr:nth-child(' + (posMissileY) + ') td:nth-child(' + (posMissileX + 1) + ')');
-    celluleMissile.innerHTML = '<img src="missile.gif">'; 
+    celluleMissile.innerHTML = '<img src="ASSET/missile.gif">'; 
     
 
     // Déplacer le missile automatiquement vers le haut
@@ -24,7 +24,7 @@ function deplacementMissile(y, x) {
         effacerAlien();
         // Effacer l'image de missile des coordonnées actuelles
         var celluleMissile = document.querySelector('tr:nth-child(' + (y + 1) + ') td:nth-child(' + (x +1) + ')');
-        celluleMissile.innerHTML = '<img src="vide.png">';
+        celluleMissile.innerHTML = '<img src="ASSET/vide.png">';
         console.log('Collision avec l\'alien!');
         updateScore();
         // Réinitialiser l'alien en haut à gauche de l'écran
@@ -34,7 +34,7 @@ function deplacementMissile(y, x) {
     } else {
         // Effacer l'image de missile des coordonnées actuelles
         var celluleMissile = document.querySelector('tr:nth-child(' + (y + 1) + ') td:nth-child(' + (x + 1) + ')');
-        celluleMissile.innerHTML = '<img src="vide.png">';
+        celluleMissile.innerHTML = '<img src="ASSET/vide.png">';
 
         // Si le missile est à la limite supérieure du plateau, ne pas le déplacer davantage
         if (y === 0) return;
@@ -42,7 +42,7 @@ function deplacementMissile(y, x) {
         // Écrire une image de missile aux coordonnées y-1
         var nouvellePositionY = y - 1;
         var nouvelleCelluleMissile = document.querySelector('tr:nth-child(' + (nouvellePositionY + 1) + ') td:nth-child(' + (x + 1) + ')');
-        nouvelleCelluleMissile.innerHTML = '<img src="missile.gif">';
+        nouvelleCelluleMissile.innerHTML = '<img src="ASSET/missile.gif">';
 
         // Appeler la fonction deplacementMissile de façon récursive avec un délai de 200ms
         setTimeout(function() {
@@ -50,7 +50,6 @@ function deplacementMissile(y, x) {
         }, 200);
     }
 }
-
 
 
 // Exporter la fonction deplacementMissile pour qu'elle soit accessible depuis l'extérieur (dans ce cas, depuis app.js)

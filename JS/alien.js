@@ -49,12 +49,12 @@ function parcoursGrille() {
 }
 function effacerAlien(){
     var celluleAlienActuelle = document.querySelector('tr:nth-child(' + posAlienY + ') td:nth-child(' + posAlienX + ')');
-    celluleAlienActuelle.innerHTML = '<img src="vide.png">'; // récupère la position de l'alien puis la remplace par du vide
+    celluleAlienActuelle.innerHTML = '<img src="ASSET/vide.png">'; // récupère la position de l'alien puis la remplace par du vide
 }
 
 function afficerAlien(){
     var celluleAlienNouvelle = document.querySelector('tr:nth-child(' + posAlienY + ') td:nth-child(' + posAlienX + ')');
-    celluleAlienNouvelle.innerHTML = '<img src="alien.gif">';    // Afficher l'alien à sa nouvelle position
+    celluleAlienNouvelle.innerHTML = '<img src="ASSET/alien.gif">';    // Afficher l'alien à sa nouvelle position
 }
 
 function resetAlien() {
