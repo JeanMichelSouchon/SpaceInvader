@@ -1,0 +1,20 @@
+# Space Invader
+## Overview
+
+Space Invader is a classic arcade-style game where players control a spaceship to defend Earth from incoming waves of alien invaders. This project aims to recreate the nostalgic experience.
+
+## Features
+
+- Main game is working
+- Main style is finished
+
+## Bug and fixes coming
+
+- Bug in the collision between the missile and the alien
+- Bug in the display ( sometimes the missile stay in the board instead of being cleared )
+
+## Installation
+
+1. Clone the repository to your local machine.
+   ```bash
+   git clone https://github.com/JeanMichelSouchon/SpaceInvader
