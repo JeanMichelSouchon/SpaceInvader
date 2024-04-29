@@ -7,7 +7,7 @@ var isEndOfGame;
 
 function initAlien() {
     posAlienX = 1;
-    posAlienY = 1;
+    posAlienY = 1; // déclare la position initial de l'alien
     isSens = false;
     isDown = false;
 
@@ -49,13 +49,12 @@ function parcoursGrille() {
 }
 function effacerAlien(){
     var celluleAlienActuelle = document.querySelector('tr:nth-child(' + posAlienY + ') td:nth-child(' + posAlienX + ')');
-    celluleAlienActuelle.innerHTML = '<img src="vide.png">';
+    celluleAlienActuelle.innerHTML = '<img src="vide.png">'; // récupère la position de l'alien puis la remplace par du vide
 }
 
 function afficerAlien(){
-    // Afficher l'alien à sa nouvelle position
     var celluleAlienNouvelle = document.querySelector('tr:nth-child(' + posAlienY + ') td:nth-child(' + posAlienX + ')');
-    celluleAlienNouvelle.innerHTML = '<img src="alien.gif">';
+    celluleAlienNouvelle.innerHTML = '<img src="alien.gif">';    // Afficher l'alien à sa nouvelle position
 }
 
 function resetAlien() {

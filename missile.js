@@ -52,6 +52,7 @@ function deplacementMissile(y, x) {
 }
 
 
+
 // Exporter la fonction deplacementMissile pour qu'elle soit accessible depuis l'extérieur (dans ce cas, depuis app.js)
 window.deplacementMissile = deplacementMissile;
 
