@@ -20,7 +20,7 @@ function pewPew() {
 
 // Fonction pour déplacer le missile vers le haut
 function deplacementMissile(y, x) {
-    if (posAlienX === x && posAlienY === y) {
+    if (posAlienX -1 === x && posAlienY  === y) {
         effacerAlien();
         // Effacer l'image de missile des coordonnées actuelles
         effaceMissile(y, x);
